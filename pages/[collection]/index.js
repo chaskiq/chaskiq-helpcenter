@@ -248,7 +248,8 @@ export async function getStaticProps({params: {collection}, locales, locale, def
 		props: { 
 			site,
 			collection: data.helpCenter.collection
-		} , // will be passed to the page component as props
+		}, // will be passed to the page component as props
+    revalidate: 60,
 	}
 }
 

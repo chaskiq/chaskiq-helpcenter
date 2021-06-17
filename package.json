@@ -5,6 +5,7 @@
   "license": "AGPLv3",
   "scripts": {
     "dev": "next dev -p 8080",
+    "lint": "next lint",
     "build": "next build",
     "start": "next start"
   },
@@ -27,5 +28,9 @@
     "react-moment": "^1.1.1",
     "redraft": "^0.10.2",
     "tailwindcss": "^2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-next": "^11.0.0"
   }
 }
