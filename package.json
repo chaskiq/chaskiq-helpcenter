@@ -2,14 +2,30 @@
   "name": "chaskiq-helpcenter-example",
   "version": "0.1.0",
   "private": true,
+  "license": "AGPLv3",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@headlessui/react": "^1.2.0",
+    "@tailwindcss/typography": "^0.4.0",
+    "Dante2": "^0.5.2",
+    "autoprefixer": "^10.2.6",
+    "moment": "^2.29.1",
     "next": "11.0.0",
+    "polished": "^4.1.3",
+    "postcss": "^8.2.9",
+    "prism": "^4.1.2",
+    "prismjs": "^1.23.0",
+    "rc-tooltip": "^5.1.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-moment": "^1.1.1",
+    "redraft": "^0.10.2",
+    "tailwindcss": "^2.1.1"
   }
 }
