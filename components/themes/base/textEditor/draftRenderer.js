@@ -287,7 +287,7 @@
  
 	 const defaultStyle = { maxWidth: `${width}px`, maxHeight: `${height}px` }
  
-	 const newUrl = "https://app.chaskiq.io"+url
+	 const newUrl = process.env.HOST + url
 	 return (
 		 <figure key={blockKey} className="graf graf--figure">
 			 <div>

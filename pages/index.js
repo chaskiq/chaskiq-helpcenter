@@ -34,7 +34,7 @@ export default function Home({site, collections}) {
                       >
                         {card.icon && (
                           <div className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                            <Image src={`https://app.chaskiq.io${card.icon}`} width="200" height="200"/>
+                            <Image src={`${process.env.HOST}${card.icon}`} width="200" height="200"/>
                           </div>
                         )}
       

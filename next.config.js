@@ -8,6 +8,7 @@ module.exports = {
     defaultLocale: 'en',
   },
   env: {
-		SITE: process.env.SITE
+		SITE: process.env.SITE,
+    HOST: process.env.HOST
   },
 }

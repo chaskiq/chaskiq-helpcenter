@@ -1,5 +1,5 @@
 export default function client(query, variables){
-	return fetch("https://dev.chaskiq.io/graphql", {
+	return fetch(`${process.env.HOST}/graphql`, {
     "headers": {
       "accept": "application/json, text/plain, */*",
       "authorization": "Bearer null",
