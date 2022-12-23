@@ -6,6 +6,7 @@ import Layout from "../../../components/themes/base/Layout";
 import Moment from "react-moment";
 import DraftRenderer from "../../../components/themes/base/textEditor/draftRenderer";
 import theme from "../../../components/themes/base/textEditor/theme";
+import Link from 'next/link'
 
 import styled from "@emotion/styled";
 import { ThemeProvider } from "@emotion/react";
@@ -106,6 +107,48 @@ export default function Article({ article, lang, site }) {
                   </NewEditorStyles>
                 </ThemeProvider>
               </div>
+
+              <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
+                {article.prevArticleUrl && (
+                  <div>
+                    <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
+                      Previous
+                    </dt>
+                    <dd className="mt-1">
+                      <a
+                        passHref
+                        className="text-md dark:text-gray-100 dark:hover:text-gray-400 text-gray-600 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out"
+                        href={article.prevArticleUrl.slug}
+                      >
+                        <span>
+                          <span aria-hidden="true">←</span>{' '}
+                          {article.prevArticleUrl.title}
+                        </span>
+                      </a>
+                    </dd>
+                  </div>
+                )}
+
+                {article.nextArticleUrl && (
+                  <div className="ml-auto text-right">
+                    <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
+                      Next
+                    </dt>
+                    <dd className="mt-1">
+                      <a
+                        passHref
+                        className="text-md dark:text-gray-100 dark:hover:text-gray-400 text-gray-600 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out"
+                        href={article.nextArticleUrl.slug}
+                      >
+                        <span>
+                          {article.nextArticleUrl.title}{' '}
+                          <span aria-hidden="true">→</span>
+                        </span>
+                      </a>
+                    </dd>
+                  </div>
+                )}
+              </dl>
 
               {/*<div dangerouslySetInnerHTML={
 								{__html: article.content.html_content}
