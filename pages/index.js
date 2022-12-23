@@ -56,9 +56,12 @@ export async function getStaticProps() {
   const res = await client(ARTICLE_SETTINGS, { domain: process.env.SITE });
   const site = await res.json();
 
+  // console.log("SITE::")
+  // console.log(site)
+
   const postsRes = await client(ARTICLE_COLLECTIONS, {
     domain: process.env.SITE,
-    lang: "en",
+    lang: process.env.DEFAULT_LOCALE || "en",
   });
 
   const {
@@ -67,7 +70,7 @@ export async function getStaticProps() {
     },
   } = await postsRes.json();
 
-  console.log(JSON.stringify(collections));
+  // console.log(collections);
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
   return {
