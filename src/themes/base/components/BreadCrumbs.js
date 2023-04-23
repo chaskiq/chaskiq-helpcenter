@@ -8,12 +8,8 @@ export default function Breadcrumbs({ breadcrumbs }) {
       {breadcrumbs.map((o, i) => (
         <React.Fragment key={`breadcrumbs-${i}`}>
           {o.to && (
-            <Link href={o.to}>
-            <a
-              className="dark:text-gray-100 dark:hover:text-gray-400 text-gray-600 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out"
-            >
+            <Link href={o.to} className="dark:text-gray-100 dark:hover:text-gray-400 text-gray-600 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
               {o.title}
-            </a>
             </Link>
           )}
 

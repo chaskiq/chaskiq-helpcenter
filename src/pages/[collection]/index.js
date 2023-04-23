@@ -1,4 +1,4 @@
-import Layout from '../../components/themes/base/Layout'
+import Layout from '../../themes/base/components/Layout'
 
 import {
   ARTICLE_SETTINGS,
@@ -7,10 +7,10 @@ import {
 
 import client from '../../client/client'
 import Link from 'next/link'
-import Breadcrumbs from '../../components/themes/base/BreadCrumbs'
-import Avatar from '../../components/themes/base/Avatar'
-import List, {ListItem, ListItemText} from '../../components/themes/base/List'
-import Tooltip from 'rc-tooltip'
+import Breadcrumbs from '../../themes/base/components/BreadCrumbs'
+import Avatar from '../../themes/base/components/Avatar'
+import List, {ListItem, ListItemText} from '../../themes/base/components/List'
+//import Tooltip from 'rc-tooltip'
 
 //import translation from './translation'
 import Moment from 'react-moment'
@@ -93,13 +93,10 @@ export default function Collection({collection, site}){
           cols={1}
           primary={
             <div className="flex flex-col">
-							<Link href={`/${collection.slug}/${article.slug}`}>
-              <a
-                className="text-lg mb-2 leading-6 font-bold text-gray-900"
+							<Link passHref href={`/${collection.slug}/${article.slug}`} className="text-lg mb-2 leading-6 font-bold text-gray-900"
                 color={'primary'}
               >
                 {translation(article.title)}
-              </a>
 							</Link>
 
               <div className="flex items-center">
@@ -168,12 +165,13 @@ export default function Collection({collection, site}){
 												collection.authors.map((o) => {
 													return (
 														<li key={`authors-${o.id}`} className="avatars__item">
-															<Tooltip
+                              <Avatar alt={o.displayName} src={o.avatarUrl} />
+															{/*<Tooltip
 																placement="bottom"
 																overlay={o.display_name}
 															>
 																<Avatar alt={o.displayName} src={o.avatarUrl} />
-															</Tooltip>
+                          </Tooltip>*/}
 														</li>
 													)
 												})}

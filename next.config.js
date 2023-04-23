@@ -1,5 +1,6 @@
-// next.config.js
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
   images: {
     domains: ['app.chaskiq.io'],
   },
@@ -12,3 +13,5 @@ module.exports = {
     HOST: process.env.HOST
   },
 }
+
+module.exports = nextConfig
