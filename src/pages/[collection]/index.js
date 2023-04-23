@@ -235,12 +235,14 @@ export async function getStaticProps({params: {collection}, locales, locale, def
 	const siteRes = await client(ARTICLE_SETTINGS, {"domain":process.env.SITE})
   const site = await siteRes.json()
 
+  // console.log("LANG:", locale)
+
 	const articleRes = await client(ARTICLE_COLLECTION_WITH_SECTIONS, 
     {"domain":process.env.SITE,"id": collection,"lang": locale }
   )
   const {data} = await articleRes.json()
 
-	// console.log(params)
+	console.log(site)
 
 	return {
 		props: { 
