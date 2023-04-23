@@ -1,5 +1,6 @@
-// next.config.js
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
   images: {
     domains: ['app.chaskiq.io', domainToOption(process.env.HOST)],
   },
@@ -13,6 +14,8 @@ module.exports = {
     DEFAULT_LOCALE: process.env.DEFAULT_LOCALE
   },
 }
+
+module.exports = nextConfig
 
 function domainToOption(domain){
   return domain.replace("https://", "")

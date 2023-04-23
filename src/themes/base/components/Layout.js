@@ -4,7 +4,7 @@ import Link from "next/link";
 import Dropdown from "./Dropdown";
 import CustomizedInputBase from "./SearchBar";
 
-import { LangGlobeIcon, LaunchIcon } from "../../themes/base/icons/icons";
+import { LangGlobeIcon, LaunchIcon } from "../icons/icons";
 import { useRouter } from "next/router";
 
 export default function Layout({ children, className, site }) {
@@ -31,10 +31,8 @@ export default function Layout({ children, className, site }) {
         <div className="lg:px-40 px-2">
           <div className="flex items-center justify-between py-2 md:mx-24 md:px-3">
             <div>
-              <Link href={`/`}>
-                <a>
-                  <img src={settings.logo} className={"h-10 md:h-16"} />
-                </a>
+              <Link href={`/`} passHref>
+                <img src={settings.logo} className={"h-10 md:h-16"} />
               </Link>
             </div>
 
