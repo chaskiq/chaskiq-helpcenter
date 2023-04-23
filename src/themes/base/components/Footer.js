@@ -1,3 +1,7 @@
+import pkg from "../../../../package.json"
+
+const {version} = pkg
+
 export default function Footer({ settings }) {
   return (
     <footer className={"py-8"}>
@@ -9,7 +13,7 @@ export default function Footer({ settings }) {
 
       {settings.siteDescription && (
         <p className="mt-2 text-sm text-gray-400 text-center">
-          {settings.siteDescription}
+          {settings.siteDescription} (<span>v{version}</span>)
         </p>
       )}
 

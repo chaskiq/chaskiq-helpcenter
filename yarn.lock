@@ -1106,8 +1106,10 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-"dante3@file:../../node_apps/dante-editor/packages/dante3":
+dante3@1.2.5:
   version "1.2.5"
+  resolved "https://registry.yarnpkg.com/dante3/-/dante3-1.2.5.tgz#54b45b5e2b49cc05ccae5ce1757db2fe568ea403"
+  integrity sha512-36962+WFS8S//lr9hDgHPWsoy2Idz2w2S9FZmGcAOKL+EWlrn9uROhHJkkT5cgmyMucaYqm9S7K6tYjFwUojfg==
   dependencies:
     "@emotion/react" "^11.10.6"
     "@emotion/styled" "^11.10.6"
