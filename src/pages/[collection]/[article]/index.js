@@ -106,7 +106,7 @@ export default function Article({ article, lang, site }) {
 
               <div className="prose--nonon">
                 <DanteRenderer 
-                domain={"https://app.chaskiq.io"}
+                  domain={process.env.HOST}
                   raw={JSON.parse(article.content.serialized_content)}/>
               </div>
 
